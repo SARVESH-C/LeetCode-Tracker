@@ -14,10 +14,12 @@ app.use(express.json())
 const authRoutes = require('./routes/auth.routes')
 const problemRoutes = require('./routes/problems.routes')
 const streakRoutes = require('./routes/streak.routes')
+const categoryRoutes = require('./routes/categories.routes')
 
 app.use('/api/auth', authRoutes)
 app.use('/api/problems', problemRoutes)
 app.use('/api/streak', streakRoutes)
+app.use('/api/categories', categoryRoutes)
 
 // Test route
 app.get('/', (req, res) => {
